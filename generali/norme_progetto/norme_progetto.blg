@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: norme_progetto.aux
+A level-1 auxiliary file: changelog.aux
+A level-1 auxiliary file: sections/introduction.aux
+A level-1 auxiliary file: sections/supporting_processes/introduction.aux
+The style file: plain.bst
+Database file #1: bibliography.bib
+Warning--empty journal in bib:ISO12207_1997
+Warning--there's a number but no volume in bib:ISO12207_1997
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            506 strings with 4207 characters,
+and the built_in function-call counts, 234 in all, are:
+= -- 20
+> -- 7
+< -- 0
++ -- 3
+- -- 2
+* -- 15
+:= -- 48
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 4
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 10
+empty$ -- 19
+format.name$ -- 2
+if$ -- 43
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 8
+num.names$ -- 2
+pop$ -- 5
+preamble$ -- 1
+purify$ -- 3
+quote$ -- 0
+skip$ -- 6
+stack$ -- 0
+substring$ -- 5
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 2
+while$ -- 2
+width$ -- 2
+write$ -- 12
+(There were 2 warnings)
