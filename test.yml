@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ "develop" ]
+
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout develop
+        uses: actions/checkout@v3
+
+      - name: Installa LaTeX
+        run: apt install -y texlive-latex-recommended texlive-latex-extra latexmk texlive-lang-italian python3
+
+      - name: Compila
+        run: latexmk -pdf -cd RTB/norme_progetto/norme_progetto.tex -outdir=tmp
+
+      - name: Mkdir & Mv file
+        run: |
+          mkdir -p RTB/Documenti_interni
+          mv tmp/norme_progetto.pdf RTB/Documenti_interni
+
+      - name: Kill tmp
+        run: rm -rf tmp/
+
+      - name: Commit GIT su dev
+        run: |
+          git config user.name "QB Software [Bot]"
+          git config user.email "qbsoftware.sew@gmail.com"
+          git add .
+          git commit -m "POC ENTRO NATALE"
+          git push orgin develop
+
+      - name: Su main
+        run: |
+          mkdir -p ../DocTemp
+          mv -r RTB/Documenti_interni ../DocTemp
+          git checkout main
+          mv -r ../DocTemp .
+          git add .
+          git commit -m "MVP ENTRO ???"
+          git push origin main
