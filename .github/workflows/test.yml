@@ -20,7 +20,7 @@ jobs:
         run: sudo apt install -y texlive-latex-recommended texlive-latex-extra latexmk texlive-lang-italian python3
 
       - name: Compila
-        run: latexmk -pdf -cd RTB/norme_progetto.tex -outdir=tmp
+        run: latexmk -pdf -cd RTB/norme_progetto/norme_progetto.tex -outdir=tmp
 
 
       - name: Mkdir & Mv file
