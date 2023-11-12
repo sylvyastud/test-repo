@@ -19,10 +19,12 @@ jobs:
       - name: Installa LaTeX
         run: sudo apt install -y texlive-latex-recommended texlive-latex-extra latexmk texlive-lang-italian python3
 
+      - name: Create Documenti directory
+        run: mkdir -p tmp
+
       - name: Compila
         run: |
-          mkdir tmp
-          latexmk -pdf -cd RTB/norme_progetto/norme_progetto.tex -outdir=tmp
+          latexmk -pdf -cd RTB/norme_progetto/norme_progetto.tex tmp/
 
 
       - name: Mkdir & Mv file
